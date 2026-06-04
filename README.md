@@ -8,7 +8,7 @@ Welcome to the National Water Center Innovators Program Summer Institute GitHub 
 
 The goal of this training is to familiarize you with the basics of GitHub. You will learn how to clone a repository, make edits, and commit changes. This exercise is intended to prepare you for contributing to collaborative projects during the Summer Institute, ensuring that all code and findings are public and reproducible.
 
-# Getting Started
+# GitHub Training Workflow
 
 ## 0. Prerequisites
 
@@ -26,13 +26,13 @@ The goal of this training is to familiarize you with the basics of GitHub. You w
 For the Summer Institute bootcamp, we’ll use the 2i2c AWI JupyterHub cloud computing platform hosted by The Alabama Water Institute. The administrators have already set this up for you, so should already have access to this platform.
 
 1. Go to https://ciroh.awi.2i2c.cloud/hub/login and log in with your GitHub username
-2. Choose Server Option – Small machine with image: “New Pangeo Notebook base image 2024.04.08” and click the _Start_ button at the bottom of the page. It might take a minute or two to start up. When it starts, it will open up a bash terminal on the right, and a file explorer on the left.
-   ![2i2c Small Machine](screenshots/2i2c_small.png)
+2. Choose Server Option – Small machine with image: “New Pangeo Notebook base image 2024.04.08” and click the _Start_ button at the bottom of the page. It might take a minute or two to start up. When it starts, it will open up a bash terminal on the right, and a file explorer on the left.  
+   <img src="screenshots/2i2c_small.png" width="90%"/>
 
    > _**Quick Trick in the JupyterHub**_
    >
    > 1. Click on "View" and toggle on "Show hidden files"
-   >    ![Show Hidden Files](screenshots/show_hidden.png)
+   >    <img src="screenshots/show_hidden.png" width="65%"/>
 
 ## 2. Generating an SSH Key for Interacting with GitHub
 
@@ -179,9 +179,10 @@ git push --set-upstream origin [your_branch_name]
 ## 10. Create a Pull Request
 
 1. Go to the GitHub repository website.
-2. Click the “Compare & pull request” button.
-   ![Pull Request 1](screenshots/pull_request1.png)
-3. Fill in the pull request details and submit.
-   ![Pull Request 2](screenshots/pull_request2.png)
+2. Click the “Compare & pull request” button.  
+   <img src="screenshots/pull_request1.png" width="80%"/>
+
+3. Fill in the pull request details and submit.  
+   <img src="screenshots/pull_request2.png" width="80%"/>
 
 By following these steps, you’ll contribute your changes to the repository and learn the basics of GitHub workflows.
