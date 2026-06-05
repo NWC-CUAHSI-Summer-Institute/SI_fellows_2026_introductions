@@ -38,118 +38,145 @@ For the Summer Institute bootcamp, we’ll use the 2i2c AWI JupyterHub cloud com
 
 The first thing we need to do is to set up our SSH Key to make changes to our _remote_ GitHub Repo.
 
-1. **Open a Terminal Window**:  
-   Once you launch the 2i2c JupyterHub, if a terminal windown isn't already open, open the _Launcher_ by clicking the <span style="color:#0F52BA">blue rectangle with a "+" sign</span>. There you can select _Terminal_. The following commands should be entered into this terminal.
+### 2a. Open a Terminal Window:
 
-2. **Configure Git**:
+Once you launch the 2i2c JupyterHub, if a terminal windown isn't already open, open the _Launcher_ by clicking the <span style="color:#0F52BA">blue rectangle with a "+" sign</span>. There you can select _Terminal_. The following commands should be entered into this terminal.
 
-   First, tell Git who you are. Replace the examples below with your own information:
+### 2b. Configure Git:
 
-   ```
-   git config --global user.name "Your Name"
-   git config --global user.email "your_email@example.com" # this should be the email associated with GitHub
-   ```
+First, tell Git who you are. Replace the examples below with your own information:
 
-   Verify your settings:
+```
+git config --global user.name "Your Name"
+git config --global user.email "your_email@example.com" # this should be the email associated with GitHub
+```
 
-   ```
-   git config --global --list
-   ```
+Verify your settings:
 
-   You should see something similar to:
+```
+git config --global --list
+```
 
-   `user.name=Your Name`  
-   `user.email=your_email@example.com`
+You should see something similar to:
 
-3. **Create an SSH Key**
+`user.name=Your Name`  
+ `user.email=your_email@example.com`
 
-   SSH keys allow GitHub to recognize your JupyterHub environment securely. To generate a new SSH key, run the following in the Terminal:
+### 2c. **Create an SSH Key**
 
-   ```
-   ssh-keygen -t ed25519 -C "your_email@example.com"
-   ```
+SSH keys allow GitHub to recognize your JupyterHub environment securely. To generate a new SSH key, run the following in the Terminal:
 
-   When prompted to "`Enter file in which to save the key`", press _**Enter**_ to accept the default location, which in the JupyterHub is `/home/jovyan/.ssh/id_ed25519`
+```
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
 
-   When prompted to "`Enter passphrase (empty for no passphrase)`":
-   - Press Enter to leave it blank (this is fine for this workshop), OR
-   - Create a passphrase for additional security
+When prompted to "`Enter file in which to save the key`", press _**Enter**_ to accept the default location, which in the JupyterHub is `/home/jovyan/.ssh/id_ed25519`
 
-   You should see output similar to:
+When prompted to "`Enter passphrase (empty for no passphrase)`":
 
-   ```
-   Your identification has been saved in /home/jovyan/.ssh/id_ed25519
+- Press Enter to leave it blank (this is fine for this workshop), OR
+- Create a passphrase for additional security
 
-   Your public key has been saved in /home/jovyan/.ssh/id_ed25519.pub
-   ```
+You should see output similar to:
+
+```
+Your identification has been saved in /home/jovyan/.ssh/id_ed25519
+
+Your public key has been saved in /home/jovyan/.ssh/id_ed25519.pub
+```
 
 ## 3. Create a new SSH Authentication Key on Github:
 
-1. **Copy your SSH key from 2i2c JupyterHub**:  
+### 3a. **Copy your SSH key from 2i2c JupyterHub**:
+
     Before heading over to https://www.github.com, you'll need to copy your SSH key. Print your public key by running:
 
-   ```
-   cat /home/jovyan/.ssh/id_ed25519.pub
-   ```
+```
+cat /home/jovyan/.ssh/id_ed25519.pub
+```
 
-   The output will look something like:
+The output will look something like:
 
-   `ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAI... your_email@example.com`
+`ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAI... your_email@example.com`
 
-   Copy the entire line to your clipboard, making sure to copy everything beginning with `ssh-ed25519` and ending with your email address.
+Copy the entire line to your clipboard, making sure to copy everything beginning with `ssh-ed25519` and ending with your email address.
 
-2. **Add the SSH Key to Github**:  
-   Open GitHub on your web browser and do the following:
-   - sign in to [GitHub](https://www.github.com)
-   - click your profile picture (upper right)
-   - select _Settings_
-   - in the left sidebar, select _SSH and GPG keys_ (left side menu)
-   - click _New SSH key_ button
+### 3b. **Add the SSH Key to Github**:
 
-   This will take you to the _**Add new SSH Key**_ form:
-   ![SSH Key Form](screenshots/gh_ssh_key.png)
+Open GitHub on your web browser and do the following:
 
-   In the SSH Key form, edit the:
-   - _Title_ - fill in a descriptive title (e.g., "CIROH JupyterHub")
-   - _Key Type_ - leave the key type as "Authentication Key"
-   - _Key_ - Paste your SSH key you copied from the 2i2c terminal.
+- sign in to [GitHub](https://www.github.com)
+- click your profile picture (upper right)
+- select _Settings_
+- in the left sidebar, select _SSH and GPG keys_ (left side menu)
+- click _New SSH key_ button
 
-   Click the _Add SSH Key_ button and you're set! GitHub may ask you to confirm your password or complete two-factor authentication.
+This will take you to the _**Add new SSH Key**_ form:
+![SSH Key Form](screenshots/gh_ssh_key.png)
 
-## 3. Clone the Repository
+In the SSH Key form, edit the:
 
-1. Go to the GitHub site for our repository: `NWC-CUAHSI-Summer-Institute/SI_fellows_2026_introductions`, and click on the green button and copy the **SSH** address.
-   ![Copy Repo SSH](screenshots/copy_repo_ssh.png)
-2. In Jupyter environment, type:
+- _Title_ - fill in a descriptive title (e.g., "CIROH JupyterHub")
+- _Key Type_ - leave the key type as "Authentication Key"
+- _Key_ - Paste your SSH key you copied from the 2i2c terminal.
 
-   ```
-   git clone git@github.com:NWC-CUAHSI-Summer-Institute/SI_fellows_2026_introductions.git
-   ```
+Click the _Add SSH Key_ button and you're set! GitHub may ask you to confirm your password or complete two-factor authentication.
 
-   Change directories into the _SI_fellows_2026_introductions_ directory:
+## 4. Clone the Repository
 
-   ```
-   cd SI_fellows_2026_introductions
-   ```
+### 4a. Copy the SSH Repo Link
 
-## 4. Make a New Branch
+Go to the GitHub site for our repository: `NWC-CUAHSI-Summer-Institute/SI_fellows_2026_introductions`, and click on the green button and copy the **SSH** address.
+![Copy Repo SSH](screenshots/copy_repo_ssh.png)
 
-1. Understand the difference between forks and branches: [Fork vs Branch](https://www.ssw.com.au/rules/fork-vs-branch/).
-2. Create a new branch:
+### 4b. In Jupyter environment, type:
 
-   ```
-   git checkout -b [your_branch_name]
-   ```
+```
+git clone git@github.com:NWC-CUAHSI-Summer-Institute/SI_fellows_2026_introductions.git
+```
 
-   List all of the branches, for fun:
+Change directories into the _SI_fellows_2026_introductions_ directory:
 
-   ```
-   git branch -a
-   ```
+```
+cd SI_fellows_2026_introductions
+```
 
-## 5. Make a New Text File and Add Your Information to it
+## 5. Make a New Branch
 
-1. Copy the `introductions.txt` file in Jupyter Lab:
+> _FYI_ - Understand the difference between forks and branches: [Fork vs Branch](https://www.ssw.com.au/rules/fork-vs-branch/).
+
+**Create a new branch**:
+
+```
+git branch [your_branch_name]
+```
+
+Checkout your branch (move from the `main` branch to `your_branch_name` branch)
+
+```
+git checkout [your_branch_name]
+```
+
+List all of the branches, for fun (and to see that your new branch is not a remote branch):
+
+```
+git branch -a
+```
+
+Set the upstream ush your local branch to remote (you only need to do this one time):
+
+```
+git push --set-upstream origin [your_branch_name]
+```
+
+> _**Note**_: As of now, your branch only exists _**locally**_ (on your computer or in your personal 2i2c JupyterHub workspace).
+>
+> - `--set-upstream` flag links a _**local branch**_ to a _**remote branch**_ so you can run `git push` and `git pull` without specifying the remote name or branch tracking targets every time.
+> - `origin` is just the default name Git gives to the URL of the remote repository you cloned.
+
+## 6. Make a New Text File and Add Your Information to it
+
+- Copy the `introductions.txt` file in Jupyter Lab:
 
 ```
 cd SI_fellow_profiles
@@ -157,32 +184,35 @@ cd SI_fellow_profiles
 cp introductions.txt <yourName_profile.txt>
 ```
 
-2. Open the new file, add a few notes about yourself, and save the file.
+- Open the new file, add a few notes about yourself, and save the file.
 
-## 8. Commit Your Changes
+## 7. Commit Your Changes
 
-1. Stage and commit your changes:
+- Stage and commit your changes:
 
 ```
 git add introductions.txt
 git commit -m "Added my profile file"
 ```
 
-## 9. Push Your Changes
+## 8. Push Your Changes
 
 1. Push your branch to the remote repository:
 
 ```
-git push --set-upstream origin [your_branch_name]
+git push
 ```
 
-## 10. Create a Pull Request
+> _**Note**_: because we already linked your local repository to the remote repository (`--set-upstream`), you can just run `git push` and it will push to the remote.
 
-1. Go to the GitHub repository website.
-2. Click the “Compare & pull request” button.  
-   <img src="screenshots/pull_request1.png" width="80%"/>
+## 9. Create a Pull Request
 
-3. Fill in the pull request details and submit.  
-   <img src="screenshots/pull_request2.png" width="80%"/>
+Go to the [GitHub repository website](https://github.com/NWC-CUAHSI-Summer-Institute/SI_fellows_2026_introductions).
+
+Click the “Compare & pull request” button.  
+ <img src="screenshots/pull_request1.png" width="80%"/>
+
+Fill in the pull request details and submit.  
+ <img src="screenshots/pull_request2.png" width="80%"/>
 
 By following these steps, you’ll contribute your changes to the repository and learn the basics of GitHub workflows.
