@@ -1,6 +1,8 @@
 # Summer Institute 2026 - GitHub Training
 
-Description: A training repository for introducing basic git collaboration workflows.
+#### Description
+
+This is a training repository for introducing basic git collaboration workflows.
 
 Welcome to the National Water Center Innovators Program Summer Institute GitHub training repository! This repository is designed to help participants of the Summer Institute get comfortable with using GitHub, a tool for collaborative software development and data science.
 
@@ -12,14 +14,14 @@ The goal of this training is to familiarize you with the basics of GitHub. You w
 
 ## 0. Prerequisites
 
+- You probably already have a GitHub account, but in case you don’t, you can sign up [here](https://github.com).
+
 - We will be using the CIROH 2i2c cloud compute platform during the Summer Institute bootcamp. You can access that platform here: https://ciroh.awi.2i2c.cloud/. Log in using your GitHub username.
 
-> If you do not have an account:
+> If you do not have a 2i2c account:
 >
-> 1.  Visit [the CIROH Hub Infrastructure Access website](https://docs.ciroh.org/docs/services/access/).
+> 1.  Visit the [CIROH Hub Infrastructure Access website](https://docs.ciroh.org/docs/services/access/).
 > 2.  Click on "Cloud Infrastructure Request Form” under “CIROH-2i2c JupyterHub”.
-
-- You probably already have a GitHub account, but in case you don’t, you can sign up [here](https://github.com).
 
 ## 1. Log into CIROH AWI 2i2c JupyterHub
 
