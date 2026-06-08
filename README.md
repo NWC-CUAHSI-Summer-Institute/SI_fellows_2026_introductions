@@ -4,7 +4,8 @@
 
 This is a training repository for introducing basic git collaboration workflows.
 
-Welcome to the National Water Center Innovators Program Summer Institute GitHub training repository! This repository is designed to help participants of the Summer Institute get comfortable with using GitHub, a tool for collaborative software development and data science.
+Welcome to the National Water Center Innovators Program Summer Institute GitHub training repository! 🙌  
+This repository is designed to help participants of the Summer Institute get comfortable with using GitHub, a tool for collaborative software development and data science.
 
 #### Training Objective
 
@@ -18,7 +19,7 @@ The goal of this training is to familiarize you with the basics of GitHub. You w
 
 - We will be using the CIROH 2i2c cloud compute platform during the Summer Institute bootcamp. You can access that platform here: https://ciroh.awi.2i2c.cloud/. Log in using your GitHub username.
 
-> If you do not have a 2i2c account:
+> 💡 If you do not have a 2i2c account:
 >
 > 1.  Visit the [CIROH Hub Infrastructure Access website](https://docs.ciroh.org/docs/services/access/).
 > 2.  Click on "Cloud Infrastructure Request Form” under “CIROH-2i2c JupyterHub”.
@@ -27,14 +28,15 @@ The goal of this training is to familiarize you with the basics of GitHub. You w
 
 For the Summer Institute bootcamp, we’ll use the 2i2c AWI JupyterHub cloud computing platform hosted by The Alabama Water Institute. The administrators have already set this up for you, so should already have access to this platform.
 
-1. Go to https://ciroh.awi.2i2c.cloud/hub/login and log in with your GitHub username
-2. Choose Server Option – Small machine with image: “New Pangeo Notebook base image 2024.04.08” and click the _Start_ button at the bottom of the page. It might take a minute or two to start up. When it starts, it will open up a bash terminal on the right, and a file explorer on the left.  
-   <img src="screenshots/2i2c_small.png" width="90%"/>
+Go to https://ciroh.awi.2i2c.cloud/hub/login and **log in with your GitHub username**.
 
-   > _**Quick Trick in the JupyterHub**_
-   >
-   > 1. Click on "View" and toggle on "Show hidden files"
-   >    <img src="screenshots/show_hidden.png" width="65%"/>
+Choose Server Option – Small machine with image: “New Pangeo Notebook base image 2024.04.08” and click the _Start_ button at the bottom of the page. It might take a minute or two to start up. When it starts, it will open up a bash terminal on the right, and a file explorer on the left.  
+ <img src="screenshots/2i2c_small.png" width="90%"/>
+
+> 💡 _**Quick Trick in the JupyterHub**_
+>
+> 1.  Click on "View" and toggle on "Show hidden files"
+>     <img src="screenshots/show_hidden.png" width="65%"/>
 
 ## 2. Generating an SSH Key for Interacting with GitHub
 
@@ -46,11 +48,12 @@ Once you launch the 2i2c JupyterHub, if a terminal windown isn't already open, o
 
 ### 2b. Configure Git:
 
-First, tell Git who you are. Replace the examples below with your own information:
+First, tell Git who you are. Replace the examples below with your own information.  
+❗ _The email used should be the one associated with GitHub_
 
 ```
 git config --global user.name "Your Name"
-git config --global user.email "your_email@example.com" # this should be the email associated with GitHub
+git config --global user.email "your_email@example.com"
 ```
 
 Verify your settings:
@@ -62,9 +65,9 @@ git config --global --list
 You should see something similar to:
 
 `user.name=Your Name`  
- `user.email=your_email@example.com`
+`user.email=your_email@example.com`
 
-### 2c. **Create an SSH Key**
+### 2c. Create an SSH Key
 
 SSH keys allow GitHub to recognize your JupyterHub environment securely. To generate a new SSH key, run the following in the Terminal:
 
@@ -87,9 +90,9 @@ Your identification has been saved in /home/jovyan/.ssh/id_ed25519
 Your public key has been saved in /home/jovyan/.ssh/id_ed25519.pub
 ```
 
-## 3. Create a new SSH Authentication Key on Github:
+## 3. Create a new SSH Authentication Key on Github
 
-### 3a. **Copy your SSH key from 2i2c JupyterHub**:
+### 3a. Copy your SSH key from 2i2c JupyterHub:
 
     Before heading over to https://www.github.com, you'll need to copy your SSH key. Print your public key by running:
 
@@ -103,7 +106,7 @@ The output will look something like:
 
 Copy the entire line to your clipboard, making sure to copy everything beginning with `ssh-ed25519` and ending with your email address.
 
-### 3b. **Add the SSH Key to Github**:
+### 3b. Add the SSH Key to Github:
 
 Open GitHub on your web browser and do the following:
 
@@ -165,20 +168,22 @@ List all of the branches, for fun (and to see that your new branch is not a remo
 git branch -a
 ```
 
-Set the upstream ush your local branch to remote (you only need to do this one time):
+Set the upstream and push your local branch to remote (you only need to do this one time):
 
 ```
 git push --set-upstream origin [your_branch_name]
 ```
 
-> _**Note**_: As of now, your branch only exists _**locally**_ (on your computer or in your personal 2i2c JupyterHub workspace).
+> 💡 _**Note**_: As of now, your branch only exists _**locally**_ (on your computer or in your personal 2i2c JupyterHub workspace).
 >
 > - `--set-upstream` flag links a _**local branch**_ to a _**remote branch**_ so you can run `git push` and `git pull` without specifying the remote name or branch tracking targets every time.
 > - `origin` is just the default name Git gives to the URL of the remote repository you cloned.
 
+> The Arctic ... provides a great [resource on collaborating with Git and information about remote repositories](https://learning.nceas.ucsb.edu/2025-02-arctic/session_08.html).
+
 ## 6. Make a New Text File and Add Your Information to it
 
-- Copy the `introductions.txt` file in Jupyter Lab:
+Copy the `introductions.txt` file in Jupyter Lab:
 
 ```
 cd SI_fellow_profiles
@@ -186,26 +191,34 @@ cd SI_fellow_profiles
 cp introductions.txt <yourName_profile.txt>
 ```
 
-- Open the new file, add a few notes about yourself, and save the file.
+Open the new file, add a few notes about yourself, and save the file.
 
 ## 7. Commit Your Changes
 
-- Stage and commit your changes:
+Before we make a commit, let's check out what the status of our repository is:
 
 ```
-git add introductions.txt
+git status
+```
+
+> 💡 _**Note**_: You'll likely see that the file you just created is red! This means the file is **untracked (or unstaged)**, which means you have created the file in your working directory, but Git is not actively monitoring its changes.
+
+Stage and commit your changes:
+
+```
+git add <yourName_profile.txt>
 git commit -m "Added my profile file"
 ```
 
 ## 8. Push Your Changes
 
-1. Push your branch to the remote repository:
+Push your branch to the remote repository:
 
 ```
 git push
 ```
 
-> _**Note**_: because we already linked your local repository to the remote repository (`--set-upstream`), you can just run `git push` and it will push to the remote.
+> 💡 _**Note**_: because we already linked your local repository to the remote repository (`--set-upstream`), you can just run `git push` and it will push to the remote.
 
 ## 9. Create a Pull Request
 
