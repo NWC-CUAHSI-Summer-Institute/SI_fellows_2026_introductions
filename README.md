@@ -30,13 +30,15 @@ For the Summer Institute bootcamp, we’ll use the 2i2c AWI JupyterHub cloud com
 
 1a. Go to https://ciroh.awi.2i2c.cloud/hub/login and **log in with your GitHub username**.
 
-1b. **Choose Server Option** – Small machine with image: “New Pangeo Notebook base image 2024.04.08” and click the _Start_ button at the bottom of the page. It might take a minute or two to start up. When it starts, it will open up a bash terminal on the right, and a file explorer on the left.  
- <img src="screenshots/2i2c_small.png" width="85%" style="border: 3px solid black;"/>
+1b. **Choose Server Option** – Small machine with image: “New Pangeo Notebook base image 2024.04.08” and click the _Start_ button at the bottom of the page. It might take a minute or two to start up. When it starts, it will open up a bash terminal on the right, and a file explorer on the left.
 
-> 💡 _**Quick Trick in the JupyterHub**_
->
-> 1.  Click on "View" and toggle on "Show hidden files"  
->     <img src="screenshots/show_hidden.png" width="60%"/>
+> <img src="screenshots/2i2c_small.png" width="85%"/>
+
+💡 _**Quick Trick in JupyterLab**_
+
+> Click on "View" and toggle on "Show hidden files".  
+> We will edit the `.gitconfig` and `.ssh` file programmatically later on and you can view those changes manually if you like.  
+>  <img src="screenshots/show_hidden.png" width="60%"/>
 
 ## 2. Generating an SSH Key for Interacting with GitHub
 
