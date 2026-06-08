@@ -30,9 +30,9 @@ For the Summer Institute bootcamp, we’ll use the 2i2c AWI JupyterHub cloud com
 
 1a. Go to https://ciroh.awi.2i2c.cloud/hub/login and **log in with your GitHub username**.
 
-1b. **Choose Server Option** – Small machine with image: “New Pangeo Notebook base image 2024.04.08” and click the _Start_ button at the bottom of the page. It might take a minute or two to start up. When it starts, it will open up a bash terminal on the right, and a file explorer on the left.
+1b. **Choose Server Option** – Medium machine with image: `Devcon26-CUAHSI Hydroinformatics` and click the _Start_ button at the bottom of the page. It might take a minute or two to start up. When it starts, it will open up a bash terminal on the right, and a file explorer on the left.
 
-> <img src="screenshots/2i2c_small.png" width="85%"/>
+> <img src="screenshots/2i2c_medium.png" width="85%"/>
 
 💡 _**Quick Trick in JupyterLab**_
 
