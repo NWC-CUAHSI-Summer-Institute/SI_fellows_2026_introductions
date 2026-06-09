@@ -1,0 +1,10 @@
+# 1. copy this file and rename it `yourname_profile.txt`
+# 2. fill out the following statements, replacing the text inside the <angle brackets>
+# 3. delete these comments if you like
+
+# ------------------ #
+Liam E. Llewellyn
+University of Illinois Urbana-Champaign
+2nd-Year Master's in Geography
+Lapenta Intern with the Office of Water Prediction
+# ------------------ #
